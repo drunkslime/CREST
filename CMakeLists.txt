@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25.0)
-set(CMAKE_C_COMPILER gcc.exe)
+set(CMAKE_C_COMPILER gcc)
 project(CREST VERSION 0.0.1 LANGUAGES C)
 
 # file globbing
