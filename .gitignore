@@ -3,3 +3,4 @@ build/
 CMakeFiles/
 /CMakeCache.txt
 bin/*.*
+/*.exe
