@@ -6,6 +6,12 @@ Status - WIP
 
 ## Build
 
+### Requirements
+
+* C, CMake
+
+* ```libmicrohttpd``` library. You can download it [here](https://www.gnu.org/software/libmicrohttpd/).
+
 ### Windows
 
 Compile using cmake
