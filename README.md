@@ -21,3 +21,13 @@ cmake --build .
 ```
 
 Run ```bin/CREST.exe```
+
+### Linux
+
+Compile using cmake
+
+```sh
+cmake --build .
+```
+
+Run ```./CREST```
