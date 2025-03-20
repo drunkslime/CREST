@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "handler.c"
+#include "handlers/handler.c"
+#include "handlers/userHandler.c"
 
 int main(int argc, char **argv) {
     struct MHD_Daemon * daemon;
@@ -16,7 +17,7 @@ int main(int argc, char **argv) {
         atoi(argv[1]),
         NULL,
         NULL,
-        &ahc_echo,
+        &user_handler,
         NULL,
         MHD_OPTION_END
     );

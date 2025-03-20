@@ -46,7 +46,12 @@ ahc_echo(
             http_response = (HTTP_Response){
                 .body = PAGE("World"),
                 .status = OK
-            };
+            };  
+        } else if (strcmp(url_str, "/users") == 0) {
+            http_response = (HTTP_Response){
+                .body = PAGE("World"),
+                .status = OK
+            };  
         } else {
             http_response = (HTTP_Response){
                 .body = PAGE("Not Found"),
