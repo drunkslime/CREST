@@ -16,4 +16,6 @@ typedef struct {
 
 char* read_user_file(const char* filename);
 
+char* formatJSONResponse(const char* text);
+
 #endif

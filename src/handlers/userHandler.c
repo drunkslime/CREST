@@ -38,7 +38,7 @@ static enum MHD_Result user_handler (
             }
         } else {
             http_response = (HTTP_Response){
-                .body = "Not Found",
+                .body = formatJSONResponse("Not found"),
                 .status = NOT_FOUND
             };
         }
