@@ -14,4 +14,6 @@ typedef struct {
     HTTP_Status status;
 } HTTP_Response;
 
+char* read_user_file(const char* filename);
+
 #endif
