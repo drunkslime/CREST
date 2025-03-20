@@ -8,7 +8,7 @@ Status - WIP
 
 ### Requirements
 
-* C, CMake
+* C, CMake, gcc
 
 * ```libmicrohttpd``` library. You can download it [here](https://www.gnu.org/software/libmicrohttpd/).
 
@@ -24,10 +24,12 @@ Run ```bin/CREST.exe```
 
 ### Linux
 
-Compile using cmake
+Run ```build-linux.sh```
+
+Or, alternatively, compile using cmake:
 
 ```sh
 cmake --build .
 ```
 
-Run ```./CREST```
+Run ```bin/crest```
