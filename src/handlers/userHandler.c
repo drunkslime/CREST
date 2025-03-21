@@ -20,13 +20,13 @@ HTTP_Response user_handler (char * url, char * method) {
             };
         } else if (strcmp(method_str, "POST") == 0) {
             http_response = (HTTP_Response){
-                .body = formatJSONResponse("Not implemented"),
+                .body = format_json_response("Not implemented"),
                 .status = NOT_IMPLEMENTED
             };
         }
     } else {
         http_response = (HTTP_Response){
-            .body = formatJSONResponse("Not found"),
+            .body = format_json_response("Not found"),
             .status = NOT_FOUND
         };
     }

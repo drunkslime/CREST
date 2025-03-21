@@ -25,7 +25,7 @@ default_handler(
 
     if (strcmp(url_str, "/") == 0) {
         http_response = (HTTP_Response){
-            .body = formatJSONResponse("Index"),
+            .body = format_json_response("Index"),
             .status = OK};
     }
     else if (strcmp(url_str, "/users") == 0) {
@@ -34,7 +34,7 @@ default_handler(
     else
     {
         http_response = (HTTP_Response){
-            .body = formatJSONResponse("Not found"),
+            .body = format_json_response("Not found"),
             .status = NOT_FOUND};
     }
 

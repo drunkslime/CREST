@@ -4,7 +4,6 @@
 #include <string.h>
 
 #include "handlers/handler.c"
-#include "handlers/userHandler.c"
 
 int main(int argc, char **argv)
 {

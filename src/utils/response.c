@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../include/utils.h"
 
-char* formatJSONResponse(const char* text) {
+char* format_json_response(const char* text) {
     size_t len = snprintf(NULL, 0, "{\"response\": \"%s\"}", text) + 1;
     char* json = malloc(len);
     if (json) {
