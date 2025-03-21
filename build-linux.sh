@@ -1,4 +1,7 @@
 #!/bin/bash
 
-ls build/ 2>1 > /dev/null || mkdir build/
-gcc -o build/crest -lmicrohttpd src/*.c || echo "1"
+ls bin/ > /dev/null 2>&1 || mkdir bin/
+if [ "$(ls | grep CMakeCache.txt)" == 0 ]
+    then cmake --build .
+    else cmake . && cmake --build .
+fi
