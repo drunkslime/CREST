@@ -29,7 +29,7 @@ static enum MHD_Result user_handler (
             };
         } else if (strcmp(url_str, "/users") == 0) {
             if (strcmp(method_str, "GET") == 0) {
-              char * json_data = read_user_file("/Users/egorsivak/Developer/crest/src/data/users.json");
+              char * json_data = read_user_file("src/data/users.json");
 
                 http_response = (HTTP_Response){
                     .body = json_data,
