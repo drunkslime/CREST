@@ -18,4 +18,6 @@ char* read_user_file(const char* filename);
 
 char* formatJSONResponse(const char* text);
 
+HTTP_Response user_handler (char * url, char * method);
+
 #endif

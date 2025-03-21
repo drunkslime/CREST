@@ -5,14 +5,14 @@
 #include "../include/utils.h"
 
 char* read_user_file(const char* filename) {
-  char *absolute_path = realpath(filename, NULL);
+  // char *absolute_path = realpath(filename, NULL);
 
-  if (!absolute_path) {
-    perror("Error resolving path");
-    return NULL;
-  }
+  // if (!absolute_path) {
+  //   perror("Error resolving path");
+  //   return NULL;
+  // }
 
-  FILE* file = fopen(absolute_path, "r");
+  FILE* file = fopen(filename, "r");
   if (file == NULL) {
       fprintf(stderr, "Failed to open file: %s\n", filename);
       return NULL;
