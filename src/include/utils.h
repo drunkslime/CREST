@@ -14,10 +14,8 @@ typedef struct {
     HTTP_Status status;
 } HTTP_Response;
 
-char* read_user_file(const char* filename);
-
 char* format_json_response(const char* text);
 
-HTTP_Response user_handler (char * url, char * method);
+char* read_user_file(const char* filename);
 
 #endif

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #include "include/utils.h"
+#include "include/userHandler.h"
 
 HTTP_Response user_handler (char * url, char * method) {
     

@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "include/utils.h"
+#include "include/userHandler.h"
 
 static enum MHD_Result
 default_handler(
