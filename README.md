@@ -24,12 +24,10 @@ Run ```bin/CREST.exe```
 
 ### Linux
 
-Run ```build-linux.sh```
+To build, run ```scripts/build-linux.sh```
 
-Or, alternatively, compile using cmake:
+To execute, run ```build/bin/crest [PORT]```
 
-```sh
-cmake --build .
-```
+To clean, run ```rm -rf build/```
 
-Run ```bin/crest```
+NOTE: In order for any scripts located in the ```scripts/``` directory to work, only execute them from local root (```CREST/```)
