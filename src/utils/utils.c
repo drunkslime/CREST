@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/utils.h"
+#include <string.h>
+#include <time.h>
+
+#include "include/utils.h"
 
 char* format_json_response(const char* text) {
     size_t len = snprintf(NULL, 0, "{\"response\": \"%s\"}", text) + 1;
@@ -51,4 +54,15 @@ char* read_user_file(const char* filename) {
     
     fclose(file);
     return buffer;
+}
+
+char * get_time(void) {
+    struct tm* ptr;
+    time_t t;
+    t = time(NULL);
+    ptr = localtime(&t);
+    char * fttime = asctime(ptr);
+    fttime[strlen(fttime) - 6] = 0; // clear beginning
+    fttime = fttime + 11; // clear ending
+    return fttime;
 }

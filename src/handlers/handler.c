@@ -5,8 +5,8 @@
 #include "include/utils.h"
 #include "include/userHandler.h"
 
-static void log_api(const char * url, const char * method) {
-    fprintf(stdout, "%s %s\n", method, url);
+static void log_api(const char * method, const char * url, HTTP_Status status) {
+    fprintf(stdout, "[@ %s] %s %s (%u)\n", get_time(), method, url, status);
 }
 
 static enum MHD_Result
@@ -28,8 +28,6 @@ default_handler(
     struct MHD_Response *response;
     HTTP_Response http_response;
 
-    log_api(url_str, method_str);
-
     if (strcmp(url_str, "/") == 0) {
         http_response = (HTTP_Response){
             .body = format_json_response("Index"),
@@ -46,6 +44,7 @@ default_handler(
     }
 
     char *page = http_response.body;
+    HTTP_Status status = http_response.status;
 
     response = MHD_create_response_from_buffer(
         strlen(page),
@@ -66,6 +65,8 @@ default_handler(
         connection,
         http_response.status,
         response);
+
+    log_api(method_str, url_str, status);
 
     MHD_destroy_response(response);
     return ret;

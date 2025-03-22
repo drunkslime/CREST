@@ -18,4 +18,6 @@ char* format_json_response(const char* text);
 
 char* read_user_file(const char* filename);
 
+char * get_time(void);
+
 #endif
