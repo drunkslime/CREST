@@ -26,8 +26,8 @@ Run ```bin/CREST.exe```
 
 To build, run ```scripts/build-linux.sh```
 
-To execute, run ```build/bin/crest [PORT]```, alternatively, run ```scripts/run-linux.sh [PORT]```
+To execute, run ```scripts/run-linux.sh [PORT]```
 
-To clean, run ```rm -rf build/```
+To clean, run ```scripts/run-clean.sh```
 
 NOTE: In order for any scripts located in the ```scripts/``` directory to work, only execute them from local root (```CREST/```)
