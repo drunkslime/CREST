@@ -1,7 +1,7 @@
 #ifndef PSQLDB_H
 #define PSQLDB_H
 
-#include <postgresql/libpq-fe.h>
+#include <libpq-fe.h>
 
 PGconn * psql_connect();
 
