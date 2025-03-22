@@ -8,8 +8,11 @@ file(GLOB_RECURSE sources "src/*.c")
 
 add_executable(CREST ${sources})
 
+find_package(PostgreSQL REQUIRED)
+include_directories(${PostgreSQL_INCLUDE_DIRS})
+
 target_include_directories(CREST PRIVATE src)
-target_link_libraries(CREST PRIVATE microhttpd)
+target_link_libraries(CREST PRIVATE microhttpd ${PostgreSQL_LIBRARIES})
 target_compile_options(CREST PRIVATE -g)
 
 set_target_properties(CREST PROPERTIES
