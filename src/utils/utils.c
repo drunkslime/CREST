@@ -19,7 +19,9 @@ char* read_user_file(const char* filename) {
     char *absolute_path = realpath(filename, NULL);
 
     if (!absolute_path) {
-        perror("Error resolving path");
+        fprintf(stderr, "Failed to resolve path: %s\n", filename);
+        fprintf(stderr, "Absolute path: %s\n", absolute_path);
+        perror(("Error resolving path"));
         return NULL;
     }
 

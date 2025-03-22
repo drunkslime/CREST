@@ -5,6 +5,10 @@
 #include "include/utils.h"
 #include "include/userHandler.h"
 
+static void log_api(const char * url, const char * method) {
+    fprintf(stdout, "%s %s\n", method, url);
+}
+
 static enum MHD_Result
 default_handler(
     void *cls,
@@ -23,6 +27,8 @@ default_handler(
 
     struct MHD_Response *response;
     HTTP_Response http_response;
+
+    log_api(url_str, method_str);
 
     if (strcmp(url_str, "/") == 0) {
         http_response = (HTTP_Response){
